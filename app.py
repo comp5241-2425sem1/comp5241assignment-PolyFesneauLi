@@ -8,10 +8,10 @@ import requests, json, os, toml
 
 file_path = 'credentials.txt'
 file_path1 = 'credentials3.txt'
-if os.path.exists(file_path):
-    with open (file_path1 , ' r') as f:
-        secrets = toml.load(f)
 if os.path.exists(file_path1):
+    with open (file_path1,'r') as f:
+        secrets = toml.load(f)
+if os.path.exists(file_path):
     with open(file_path,'r') as f:
         # read the file the firstline is the API key
         OPENROUTER_API_KEY = f.readline().strip()
