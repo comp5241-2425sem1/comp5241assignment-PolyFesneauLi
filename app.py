@@ -106,10 +106,10 @@ if uploaded_file is not None:
             elif len(answer)==1:
                 st.success(f"Answer:")
                 st.code(answer,language='text')
-            st.success(f"Categories: ")
-            for cate in categories:
-                if(df[(df['Question'] == q) & (df['Category']==cate)]['Answer'].values == answer):
-                    st.markdown(f"```text\n{cate}\n```")
+            # st.success(f"Categories: ")
+            # for cate in categories:
+            #     if(df[(df['Question'] == q) & (df['Category']==cate)]['Answer'].values == answer):
+            #         st.markdown(f"```text\n{cate}\n```")
             st.success(f"Reference: ")
             Reference = df[(df['Question'] == q) & (df['Category'].isin(categories))].values
             st.markdown(f"```text\n{Reference}\n```")
