@@ -11,7 +11,7 @@ if os.path.exists(file_path):
         # read the file the firstline is the API key
         OPENROUTER_API_KEY = f.readline().strip()
 secrets = st.secrets
-print(secrets)
+st.success(secrets)
 # OPENROUTER_API_KEY = secrets['OPENROUTER']['Key2']
 
 # OPENROUTER_API_KEY  = 
