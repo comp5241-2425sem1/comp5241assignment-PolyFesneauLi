@@ -5,13 +5,19 @@ import streamlit as st
 import pandas as pd
 import requests, json, os, toml
 
+
 file_path = 'credentials.txt'
+file_path1 = 'credentials3.txt'
+if os.path.exists(file_path):
+    with open (file_path1 , ' r') as f:
+        secrets = toml.load(f)
 if os.path.exists(file_path):
     with open(file_path, 'r') as f:
         # read the file the firstline is the API key
         OPENROUTER_API_KEY = f.readline().strip()
-secrets = st.secrets
-st.success(secrets)
+# secrets = st.secrets
+
+st.success(f"this is{secrets}")
 # OPENROUTER_API_KEY = secrets['OPENROUTER']['Key2']
 
 # OPENROUTER_API_KEY  = 
