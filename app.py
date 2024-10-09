@@ -5,11 +5,13 @@ import streamlit as st
 import pandas as pd
 import requests, json, os, toml
 
-file_path = 'credentials.txt'
-if os.path.exists(file_path):
-    with open(file_path, 'r') as f:
-        # read the file the firstline is the API key
-        OPENROUTER_API_KEY = f.readline().strip()
+# file_path = 'credentials.txt'
+# if os.path.exists(file_path):
+#     with open(file_path, 'r') as f:
+#         # read the file the firstline is the API key
+#         OPENROUTER_API_KEY = f.readline().strip()
+secrets = st.secrets
+OPENROUTER_API_KEY = secrets['OPENROUTER']['OPENROUTER_API_KEY']
 
 # OPENROUTER_API_KEY  = 
 def SynonymTransform(L,question)-> str:
