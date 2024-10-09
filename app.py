@@ -11,7 +11,7 @@ import requests, json, os, toml
 #         # read the file the firstline is the API key
 #         OPENROUTER_API_KEY = f.readline().strip()
 secrets = st.secrets
-OPENROUTER_API_KEY = secrets['OPENROUTER']['OPENROUTER_API_KEY']
+OPENROUTER_API_KEY = secrets['OPENROUTER']['Key2']
 
 # OPENROUTER_API_KEY  = 
 def SynonymTransform(L,question)-> str:
